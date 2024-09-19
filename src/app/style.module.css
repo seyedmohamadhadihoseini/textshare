@@ -1,0 +1,17 @@
+.mainform {
+    width: 80%;
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    padding: 10px;
+    color: aquamarine;
+    margin: 0 auto;
+    
+}
+.mainform textarea{
+    caret-color: red;
+    border: 1px solid black;
+}
+.mainform button {
+    padding: 10px;
+    background-color: green;
+}
