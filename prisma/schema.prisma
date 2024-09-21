@@ -9,10 +9,11 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
+  provider = "mysql"
   url      = env("DATABASE_URL")
 }
+
 model Text {
-  id String @unique
-  text String 
+  id   String @unique
+  text String @db.LongText
 }

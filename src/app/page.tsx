@@ -8,7 +8,7 @@ export default function Home() {
       <textarea name="text" >
 
       </textarea>
-      <button type="submit">Ok</button>
+      <button type="submit">Generate Link</button>
     </form>
   </div>
 }
