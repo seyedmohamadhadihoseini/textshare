@@ -1,0 +1,17 @@
+
+.main .inner-text{
+    border: 1px solid gray;
+    margin: 10px;
+    padding: 10px;
+}
+.main button{
+    display: block;
+    margin: 0 auto ;
+    background-color: blue;
+    color: aliceblue;
+    padding: 14px;
+    border-radius: 8px;
+}
+.main button:hover{
+    padding: 17px;
+}

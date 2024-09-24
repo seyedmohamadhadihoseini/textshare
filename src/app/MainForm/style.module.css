@@ -10,17 +10,10 @@
     width: 100%;
 }
 
-.mainform textarea {
-    caret-color: rgb(38, 0, 255);
-    margin: 0 auto;
-    
-    border: 1px solid black;
 
-    width: 100%;
-    height: 80%;
-}
 
 .mainform button {
+    margin: 0 auto;
     display: block;
     padding: 10px;
     width: max-content;

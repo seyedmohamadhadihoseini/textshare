@@ -1,4 +1,5 @@
 import prisma from "@/service/prisma";
+import DispalyFormText from "./DisplayForm";
 
 export default async function DispalyText({ params }: { params: { id: string } }) {
     const id = params.id;
@@ -10,8 +11,7 @@ export default async function DispalyText({ params }: { params: { id: string } }
     if (!text) {
         return <div>you are not any text here</div>
     }
-
     return <div>
-        {text.text}
-    </div>
+        <DispalyFormText htmlString={text.text} />  
+    </div>  
 }

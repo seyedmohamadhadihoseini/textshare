@@ -1,14 +1,7 @@
 
-import SaveText from "./server";
-import style from "./style.module.css";
-
+import dynamic from "next/dynamic"
+const TextShareForm = dynamic(() => import("./MainForm"), { ssr: false });
 export default function Home() {
-  return <div>
-    <form className={style.mainform} action={SaveText}>
-      <textarea name="text" >
 
-      </textarea>
-      <button type="submit">Generate Link</button>
-    </form>
-  </div>
+  return <TextShareForm />
 }
