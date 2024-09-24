@@ -8,7 +8,7 @@ export default function TextShareForm() {
   const [data, setData] = useState("");
   return <div>
     <form className={style.mainform} action={SaveText}>
-      <CustomEditor setData={setData} initialData="hi"/>
+      <CustomEditor setData={setData} initialData=""/>
       <input hidden type="text" readOnly name="text" value={data} />
       <button type="submit">Generate Link</button>
     </form>
