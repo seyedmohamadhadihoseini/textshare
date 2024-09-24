@@ -2,7 +2,6 @@
 import { useState } from "react";
 import SaveText from "./server";
 import style from "./style.module.css";
-import dynamic from "next/dynamic";
 import CustomEditor from "@/component/CkEditor";
 
 export default function TextShareForm() {

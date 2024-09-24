@@ -218,7 +218,7 @@ export default function CustomEditor({ setData=(x)=>x,initialData }: { setData: 
                     <div className="editor-container__editor">
                         <div ref={editorRef}>{isLayoutReady && <CKEditor onChange={(event, editor) => {
                             setData(editor.getData());
-                            event.name;
+                            event.name.replace("4","d");
                         }} editor={ClassicEditor} config={editorConfig} />}</div>
                     </div>
                 </div>
