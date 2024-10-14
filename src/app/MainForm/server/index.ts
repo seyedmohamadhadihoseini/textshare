@@ -1,17 +1,33 @@
 "use server";
 
 import prisma from "@/service/prisma";
-import { randomUUID } from "crypto";
-import { redirect } from "next/navigation";
 
-export default async function SaveText(formData: FormData) {
+export default async function SaveText(prevState: { id: number, success: boolean, message: string }, formData: FormData) {
     const text = formData.get("text") as string;
-    const id = randomUUID();
+    const id = formData.get("id") as string;
+    console.log(id)
+    const id_count = await prisma.text.count({
+        where: {
+            id
+        }
+    });
+    if (id_count > 0) {
+        return {
+            id: prevState.id + Math.random() + 1,
+            success: false,
+            message: "this id already exists"
+        }
+    }
 
-    await prisma.text.create({
+    const textCreated = await prisma.text.create({
         data: {
             id, text
         }
     })
-    redirect(`/${id}`);
+    console.log(textCreated)
+    return {
+        id:prevState.id + Math.random() + 1,
+        success: true,
+        message: "successfully genereted"
+    }
 }

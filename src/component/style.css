@@ -22,6 +22,5 @@
 
 .editor-container_classic-editor .editor-container__editor {
     left: 0;
-	min-width: 795px;
-	max-width: 795px;
+	max-width: 100%;
 }
