@@ -5,7 +5,6 @@ import prisma from "@/service/prisma";
 export default async function SaveText(prevState: { id: number, success: boolean, message: string }, formData: FormData) {
     const text = formData.get("text") as string;
     const id = formData.get("id") as string;
-    console.log(id)
     const id_count = await prisma.text.count({
         where: {
             id

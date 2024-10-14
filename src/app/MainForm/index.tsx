@@ -19,7 +19,7 @@ export default function TextShareForm() {
       if (state.success) {
         router.push(`/${id}`);
       } else {
-        toast.warning("you lose");
+        toast.warning("choose another id");
       }
     } else {
       setId(GenerateRandomId());
