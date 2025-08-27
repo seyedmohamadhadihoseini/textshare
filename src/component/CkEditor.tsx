@@ -209,6 +209,8 @@ export default function CustomEditor({ setData=(x)=>x,initialData }: { setData: 
         placeholder: 'Type or paste your content here!',
         table: {
             contentToolbar: ['tableColumn', 'tableRow', 'mergeTableCells', 'tableProperties', 'tableCellProperties']
+        },fontColor:{
+            colors:[ {color:"black"}]
         }
     };
     return (
@@ -216,7 +218,7 @@ export default function CustomEditor({ setData=(x)=>x,initialData }: { setData: 
             <div className="main-container">
                 <div className="editor-container editor-container_classic-editor" ref={editorContainerRef}>
                     <div className="editor-container__editor">
-                        <div ref={editorRef}>{isLayoutReady && <CKEditor onChange={(event, editor) => {
+                        <div ref={editorRef}>{isLayoutReady && <CKEditor  onChange={(event, editor) => {
                             setData(editor.getData());
                             event.name.replace("4","d");
                         }} editor={ClassicEditor} config={editorConfig} />}</div>

@@ -11,6 +11,10 @@
 	width: fit-content;
 	margin-left: auto;
 	margin-right: auto;
+	color: black;
+}
+.main-container *{
+	color: black;
 }
 
 .ck-content {
